@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "org.alljoyn.onboarding.test"
+        minSdkVersion 15
+        targetSdkVersion 16
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/alljoyn.jar')
+    compile files('libs/alljoyn_about.jar')
+    compile files('libs/alljoyn_apps_android_utils.jar')
+    compile files('libs/alljoyn_onboarding.jar')
+}
